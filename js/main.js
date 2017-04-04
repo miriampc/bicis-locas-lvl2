@@ -105,7 +105,12 @@ function removeTooltip(){
      tool[i].style.display="none";
    }
 }
-
+var texto="";
+var arrayTexto=valor.value.split(" ");
+for(var i=0;i<arrayTexto.length;i++){
+  arrayTexto[i]=arrayTexto[i].charAt(0).toUpperCase()+arrayTexto[i].substring(1).toLowerCase()+" ";
+  texto+=arrayTexto[i];
+}
 //Validacion de Formulario
   if(validaNombreApellido(name)){
     if(validaNombreApellido(lastname)){
